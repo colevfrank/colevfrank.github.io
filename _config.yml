@@ -17,15 +17,15 @@ minimal: false             # use a dark header
 
 navigation:                # accepts {file, title, url, icon, sidebaricon}
   - {file: "index.html", title: "Home", icon: home}
-  - {url: "files/cvf_4_2023_resume.pdf", title: "Resume"}
-#  - {title: "Blog", file: "blog.md"}
-#  - {file: "README.md", title: "About"}
+#  - {file: "research.html", title: "Research", icon: flask}  # deactivated - uncomment when ready
+  - {url: "https://substack.com/@colefrank", title: "Substack", icon: edit}
+  - {url: "https://twitter.com/colevfrank", title: "Twitter", icon: twitter}
+  - {url: "files/cvf_4_2023_resume.pdf", title: "Resume", icon: file}
 
 
 external:                  # shows a footer with social links - for available icons see fontawesome.com/icons
   - {title: Mail, icon: envelope, url: "mailto:cole.v.frank@gmail.com"}
   - {title: Github, icon: github, url: "https://github.com/colevfrank"}
-  - {title: Twitter, icon: twitter, url: "https://twitter.com/colevfrank"}
 
 comments:
 #  disqus_shortname: ""    # see https://disqus.com/
