@@ -1,35 +1,28 @@
 // Custom styles for clean, minimal profile layout
 
 .profile-section
-  display: flex
-  align-items: flex-start
-  gap: 2.5rem
   margin: 2rem 0
   max-width: 900px
 
-  @media (max-width: 768px)
-    flex-direction: column
-    text-align: center
-    gap: 1.5rem
-    align-items: center
-
 .profile-photo
-  flex-shrink: 0
+  float: left
+  margin: 0 1.5rem 1rem 0
 
 .profile-img
-  width: 140px
-  height: 140px
+  width: 70px
+  height: 70px
   border-radius: 50%
   object-fit: cover
-  border: 3px solid reduce(10)
-  box-shadow: 0 4px 12px rgba($dark, 0.1)
+  border: 2px solid reduce(10)
+  box-shadow: 0 2px 8px rgba($dark, 0.1)
 
   @media (max-width: 768px)
-    width: 120px
-    height: 120px
+    width: 60px
+    height: 60px
+    margin: 0 1rem 0.5rem 0
 
 .profile-content
-  flex: 1
+  overflow: hidden
 
   h1
     margin: 0 0 1.2rem 0
