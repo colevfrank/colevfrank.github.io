@@ -1,5 +1,8 @@
 // Custom styles for clean, minimal profile layout
 
+// Off-white color for better readability on dark backgrounds
+$off-white: #f8f9fa
+
 .profile-section
   margin: 2rem 0
   max-width: 900px
@@ -9,16 +12,16 @@
   margin: 0 1.5rem 1rem 0
 
 .profile-img
-  width: 40px
-  height: 40px
+  width: 120px
+  height: 120px
   border-radius: 50%
   object-fit: cover
   border: 2px solid reduce(10)
   box-shadow: 0 2px 8px rgba($dark, 0.1)
 
   @media (max-width: 768px)
-    width: 35px
-    height: 35px
+    width: 105px
+    height: 105px
     margin: 0 1rem 0.5rem 0
 
 .profile-content
@@ -28,7 +31,7 @@
     margin: 0 0 1.2rem 0
     font-size: 2.8rem
     font-weight: $heading-weight
-    color: $dark
+    color: $off-white
     line-height: 1.1
 
     @media (max-width: 768px)
@@ -37,7 +40,7 @@
 .research-description
   font-size: 1.05rem
   line-height: 1.6
-  color: reduce(80)
+  color: $off-white
 
   p
     margin: 1rem 0
@@ -54,14 +57,14 @@
     margin: 2rem 0
 
     h2
-      color: $dark
+      color: $off-white
       font-weight: $heading-weight
       border-bottom: 2px solid reduce(15)
       padding-bottom: 0.5rem
       margin-bottom: 1.5rem
 
     h3, h4
-      color: $dark
+      color: $off-white
       font-weight: $heading-weight
       margin: 1.5rem 0 0.5rem 0
 
