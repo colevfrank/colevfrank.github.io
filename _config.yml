@@ -20,7 +20,7 @@ navigation:                # accepts {file, title, url, icon, sidebaricon}
 #  - {file: "research.html", title: "Research", icon: flask}  # deactivated - uncomment when ready
   - {url: "https://substack.com/@colefrank", title: "Substack", icon: edit}
   - {url: "https://twitter.com/colevfrank", title: "Twitter", icon: twitter}
-  - {url: "files/cvf_4_2023_resume.pdf", title: "Resume", icon: file}
+  - {url: "files/cvf_3_2026_resume.pdf", title: "Resume", icon: file}
 
 
 external:                  # shows a footer with social links - for available icons see fontawesome.com/icons
