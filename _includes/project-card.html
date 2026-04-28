@@ -1,0 +1,32 @@
+{%- assign p = include.project -%}
+{%- comment -%}
+Pick the headline link in priority order: paper > demo > code > post > video > slides.
+The title links to whichever is present; remaining links show in the footer.
+{%- endcomment -%}
+{%- assign headline = p.links.paper | default: p.links.demo | default: p.links.code | default: p.links.post | default: p.links.video | default: p.links.slides -%}
+<li class="project-card">
+  <h3>
+    {%- if headline -%}
+      <a href="{{ headline }}">{{ p.title }}</a>
+    {%- else -%}
+      {{ p.title }}
+    {%- endif -%}
+  </h3>
+  {%- if p.blurb -%}
+    <p class="project-blurb">{{ p.blurb }}</p>
+  {%- endif -%}
+  <div class="project-meta">
+    {%- if p.tags -%}
+      <div class="tags">
+        {%- for t in p.tags -%}<span class="tag">{{ t }}</span>{%- endfor -%}
+      </div>
+    {%- endif -%}
+    {%- if p.links -%}
+      <div class="project-links">
+        {%- for link in p.links -%}
+          <a href="{{ link[1] }}">{{ link[0] }}</a>
+        {%- endfor -%}
+      </div>
+    {%- endif -%}
+  </div>
+</li>

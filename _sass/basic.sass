@@ -1,9 +1,9 @@
 body
-  background: $light
-  color: $dark
+  background: var(--bg)
+  color: var(--fg)
   font-family: $font-family
   font-weight: $font-weight
-  font-size: $font-size
+  font-size: var(--fs-base)
   line-height: $line-height
   margin: 0
   min-height: 100vh
@@ -11,22 +11,28 @@ body
   -webkit-font-smoothing: antialiased
   -moz-osx-font-smoothing: grayscale
 
-@media (prefers-color-scheme: dark)
-  body
-    background: $dark
-    color: $light
-
 h1, h2, h3, h4, h5, h6
   font-weight: $heading-weight
+  letter-spacing: -0.01em
+
+h1
+  font-size: var(--fs-h1)
+  line-height: 1.15
+
+h2
+  font-size: var(--fs-h2)
+  line-height: 1.25
 
 b, strong, th
   font-weight: $font-weight + 200
 
-p
-  text-align: justify
+@media (min-width: 60em)
+  p
+    text-align: justify
+    hyphens: auto
 
 a
-  color: $link-color
+  color: var(--accent)
   text-decoration: inherit
   &:hover
     text-decoration: underline
@@ -35,34 +41,33 @@ header a, footer a, aside a
   color: inherit
 
 header time
-  color: reduce(100)
+  color: var(--fg-muted)
 
 hr
-  border: 1px solid reduce(30)
+  border: 0
+  border-top: 1px solid var(--rule)
   margin: 2em 0
 
 article:not(:last-of-type)
-  border-bottom: 1px solid reduce(14)
+  border-bottom: 1px solid var(--rule)
 
 blockquote
   background: reduce(6)
-  border-left: 3px solid reduce(90)
+  border-left: 3px solid var(--accent)
   padding: 1px 1.5em
-  opacity: .75
+  color: var(--fg-muted)
 
 blockquote, figure
   margin: 1em 0
 
 img
   margin: .5em 0
-
-li
-  margin: .25em 0
-
-img
   border-radius: 2px
   max-width: 100%
   height: auto
+
+li
+  margin: .25em 0
 
 table
   display: inline-block
@@ -70,27 +75,47 @@ table
   overflow-y: scroll
   border-spacing: 1px
   border-radius: 2px
-  box-shadow: 0 0 0 1px reduce(12) inset
+  box-shadow: 0 0 0 1px var(--rule) inset
 
 th, td
   padding: .5em 1em
-  box-shadow: 0 0 0 1px reduce(12)
+  box-shadow: 0 0 0 1px var(--rule)
 
 tr:hover, tr:nth-child(odd) td
   background: reduce(4)
 
+pre, code, kbd
+  font-family: $mono-family
+
 pre
-  background: reduce(12)
+  background: var(--code-bg)
   border-radius: 2px
-  font-size: .8em
+  font-size: .85em
   margin: 1.5em 0
   padding: .8em 1.2em
   overflow-x: auto
 
 \:not(pre) > code
   font-size: .9em
-  background: reduce(15)
-  opacity: .7
+  background: var(--code-bg)
   border-radius: 2px
   margin: 0 .1em
-  padding: .2em .4em
+  padding: .15em .4em
+
+\:focus-visible
+  outline: 2px solid var(--accent)
+  outline-offset: 2px
+  border-radius: 2px
+
+.skip-link
+  position: absolute
+  top: -100px
+  left: 0
+  background: var(--bg)
+  color: var(--fg)
+  padding: .5em 1em
+  border: 1px solid var(--accent)
+  z-index: 100
+
+  &:focus
+    top: 0

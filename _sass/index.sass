@@ -1,11 +1,39 @@
-$font-size: calc(0.8rem + 0.2vw) !default
 $font-weight: 400 !default
-$font-family: "PT Sans", -apple-system, "Helvetica Neue", "Segoe UI", "Roboto", sans-serif !default
+$font-family: "Plex Sans", -apple-system, "Helvetica Neue", "Segoe UI", "Roboto", sans-serif !default
+$mono-family: "JetBrains Mono", ui-monospace, "SF Mono", Menlo, Consolas, monospace !default
 $heading-weight: 600 !default
 $line-height: 1.6 !default
-$link-color: #68f !default
+$link-color: #4a6b3a !default
 $dark: #212228 !default
 $light: #ffffff !default
 
 @function reduce ($percent)
   @return rgba(mix($dark, $light), $percent / 100)
+
+// Runtime theme tokens. Sass vars above remain authoritative for compile-time
+// values that feed reduce() (which is theme-agnostic — 50% gray + opacity).
+\:root
+  --bg: #fdfdfc
+  --fg: #1a1b1f
+  --fg-muted: #5b5d66
+  --rule: #{reduce(14)}
+  --accent: #4a6b3a
+  --accent-fg: #ffffff
+  --code-bg: #{reduce(8)}
+  --fs-base: clamp(1rem, calc(0.95rem + 0.25vw), 1.125rem)
+  --fs-h1: clamp(2rem, calc(1.6rem + 1.6vw), 2.75rem)
+  --fs-h2: clamp(1.4rem, calc(1.2rem + 0.9vw), 1.75rem)
+  --measure: 68ch
+
+@media (prefers-color-scheme: dark)
+  \:root:not([data-theme="light"])
+    --bg: #15161a
+    --fg: #ececec
+    --fg-muted: #9ea1ab
+    --accent: #a8c890
+
+\:root[data-theme="dark"]
+  --bg: #15161a
+  --fg: #ececec
+  --fg-muted: #9ea1ab
+  --accent: #a8c890

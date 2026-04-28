@@ -9,7 +9,7 @@ date_format: "%B %d, %Y"
 # Layout
 
 show_excerpts: true        # show article excerpts on the home page
-show_frame: true           # adds a gray frame to the site
+show_frame: false          # adds a gray frame to the site
 show_sidebar: false        # show a sidebar instead of the usual header
 minimal: false             # use a dark header
 
@@ -17,7 +17,7 @@ minimal: false             # use a dark header
 
 navigation:                # accepts {file, title, url, icon, sidebaricon}
   - {file: "index.html", title: "Home", icon: home}
-#  - {file: "research.html", title: "Research", icon: flask}  # deactivated - uncomment when ready
+  - {file: "projects.html", title: "Projects", icon: code}
   - {url: "https://substack.com/@colefrank", title: "Substack", icon: edit}
   - {url: "https://twitter.com/colevfrank", title: "Twitter", icon: twitter}
   - {url: "files/cvf_3_2026_resume.pdf", title: "Resume", icon: file}
@@ -27,9 +27,25 @@ external:                  # shows a footer with social links - for available ic
   - {title: Mail, icon: envelope, url: "mailto:cole.v.frank@gmail.com"}
   - {title: Github, icon: github, url: "https://github.com/colevfrank"}
 
+# Extra icons not tied to a nav entry — referenced from layouts/includes
+extra_icons: [sun, moon, code]
+
 comments:
 #  disqus_shortname: ""    # see https://disqus.com/
 #  isso_domain: ""         # see https://posativ.org/isso/
 
+# SEO / social card metadata (used by jekyll-seo-tag)
+twitter:
+  username: colevfrank
+  card: summary
+social:
+  name: Cole Frank
+  links:
+    - https://github.com/colevfrank
+    - https://twitter.com/colevfrank
+    - https://substack.com/@colefrank
+
 plugins:
  - jekyll-feed
+ - jekyll-seo-tag
+ - jekyll-sitemap

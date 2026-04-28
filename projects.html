@@ -1,0 +1,14 @@
+---
+layout: page
+title: Projects
+permalink: /projects/
+---
+
+<p>Things I've built, written, or contributed to. Edit <code>_data/projects.yml</code> to add an entry.</p>
+
+<ul class="project-grid">
+  {%- assign projects = site.data.projects | sort: "date" | reverse -%}
+  {%- for project in projects -%}
+    {%- include project-card.html project=project -%}
+  {%- endfor -%}
+</ul>

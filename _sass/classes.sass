@@ -6,13 +6,13 @@
 
 .more a
   border-radius: 2px
-  border: 1.5px solid $link-color
+  border: 1.5px solid var(--accent)
   padding: .4em .8em
-  transition: .2s background, .2s color
+  transition: background 0.15s ease, color 0.15s ease
 
 .more a:hover
-  color: #fff
-  background: $link-color
+  color: var(--accent-fg)
+  background: var(--accent)
   text-decoration: inherit
 
 .archive
@@ -33,7 +33,7 @@
   margin-bottom: .15em
 
 a:hover .icon
-  color: reduce(100)
+  color: var(--accent)
 
 .full table
   display: table

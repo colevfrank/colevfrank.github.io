@@ -2,6 +2,11 @@ body
   display: flex
   flex-direction: column
 
+main
+  flex-grow: 1
+  display: flex
+  flex-direction: column
+
 article
   flex-grow: 1
 
@@ -11,18 +16,44 @@ body > header, body > footer
   align-items: center
   justify-content: space-between
 
-body > header, body > article, body > footer
+body > header, main > article, body > footer
   padding: 1.5em
+
+main > article
+  width: 100%
+  margin-inline: auto
+  box-sizing: border-box
+
+// Prose elements get the reading-measure cap; full-bleed components
+// (.profile-section, .project-grid, .viz-body, etc.) opt out by being
+// flagged below.
+main > article > p,
+main > article > ul,
+main > article > ol,
+main > article > blockquote,
+main > article > pre,
+main > article > h1,
+main > article > h2,
+main > article > h3,
+main > article > h4,
+main > article > .more
+  max-width: var(--measure)
+  margin-inline: auto
 
 article header
   margin-bottom: 1.5em
+  max-width: var(--measure)
+  margin-inline: auto
 
 article header h1
-  font-size: 1.7em
+  font-size: var(--fs-h1)
   margin: 0 0 .1em
 
 nav
-  margin: .5em -1.2em
+  display: flex
+  flex-wrap: wrap
+  align-items: center
+  margin: .25em 0
 
 nav a
-  margin: .5em 1.2em
+  margin: .25em 0

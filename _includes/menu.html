@@ -1,4 +1,4 @@
-<nav>
+<nav{% if include.label %} aria-label="{{ include.label }}"{% endif %}>
 {%- for item in include.menu -%}
   {%- assign node = site.pages | where: "name", item.file | first -%}
   {%- assign url = item.url | default: node.url -%}

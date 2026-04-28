@@ -3,26 +3,26 @@
 
 @import index, font, basic, layout, classes, custom
 
-@media (min-width: 40em)
-  body > header, body > article, body > footer
-    padding: 1.75em calc(40% - 17em)
+// Center the page contents with a generous max-width.
+// Reading column inside <article> is further constrained via var(--measure)
+// so wide layouts (project grid, viz) can still breathe.
+$page-max: 56rem
 
-{% if site.minimal %}
+body > header, body > footer
+  width: 100%
+  max-width: $page-max
+  margin-inline: auto
+  box-sizing: border-box
+
+main
+  width: 100%
+  max-width: $page-max
+  margin-inline: auto
+  box-sizing: border-box
 
 body > header
-  background: $dark
-  color: $light
-  border-bottom: 1px solid reduce(14)
-
-{% else %}
-
-body > header
-  box-shadow: 0 0 .6em rgba($dark, 0.04)
-  border-bottom: 1px solid reduce(14)
-
-{% endif %}
+  border-bottom: 1px solid var(--rule)
 
 body > footer
-  box-shadow: 0 0 .6em rgba($dark, 0.04) inset
-  border-top: 1px solid reduce(14)
+  border-top: 1px solid var(--rule)
   opacity: .9

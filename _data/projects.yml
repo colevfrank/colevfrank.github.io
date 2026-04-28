@@ -1,0 +1,26 @@
+# Each entry is a project, paper, or external piece of work.
+# Required: title, blurb. Everything else is optional.
+# `links` keys recognized: paper, code, demo, post, video, slides.
+# Add new entries on top or anywhere — they're sorted by `date` (YYYY-MM).
+
+- title: "Placeholder project"
+  date: 2026-04
+  blurb: "Replace this with a one-sentence description of something you've built or written."
+  tags: [machine-learning, evaluation]
+  links:
+    code: https://github.com/colevfrank
+  featured: true
+
+- title: "Another placeholder"
+  date: 2025-11
+  blurb: "Anything with a public URL belongs here — papers, repos, dashboards, posts."
+  tags: [causal-inference]
+  links:
+    post: https://substack.com/@colefrank
+
+- title: "Earlier work"
+  date: 2024-06
+  blurb: "Older entries can stay around indefinitely; the date controls ordering."
+  tags: [economics]
+  links:
+    paper: https://example.com
