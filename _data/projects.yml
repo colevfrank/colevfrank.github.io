@@ -3,24 +3,31 @@
 # `links` keys recognized: paper, code, demo, post, video, slides.
 # Add new entries on top or anywhere — they're sorted by `date` (YYYY-MM).
 
-- title: "Placeholder project"
-  date: 2026-04
-  blurb: "Replace this with a one-sentence description of something you've built or written."
+- title: "Out of Distribution Detection: Knowing When AI Doesn't Know"
+  date: 2025-06
+  blurb: "Three approaches to detecting when an AI model is operating outside its training distribution, framed as a reliability layer for safety-critical deployments."
   tags: [machine-learning, evaluation]
   links:
-    code: https://github.com/colevfrank
+    post: https://www.sei.cmu.edu/blog/out-of-distribution-detection-knowing-when-ai-doesnt-know/
+
+- title: "Hands-On Computer Vision Tutorial"
+  date: 2025-02
+  blurb: "Notebooks and exercises for CMU-SEI's hands-on computer vision course, runnable via Binder or Colab."
+  tags: [machine-learning, teaching]
+  links:
+    code: https://github.com/sei-cfrank/CVIntro
+
+- title: "Gone but Not Forgotten: Improved Benchmarks for Machine Unlearning"
+  date: 2024-05
+  blurb: "Alternative evaluation methods for machine unlearning algorithms — existing benchmarks rely on weak membership-inference attacks and overstate privacy gains. With Grimes, Abidi, Gallagher."
+  tags: [machine-learning, evaluation]
+  links:
+    paper: https://arxiv.org/abs/2405.19211
   featured: true
 
-- title: "Another placeholder"
-  date: 2025-11
-  blurb: "Anything with a public URL belongs here — papers, repos, dashboards, posts."
-  tags: [causal-inference]
+- title: "Bias and Fairness in Modeling and Underwriting"
+  date: 2022-10
+  blurb: "A primer on algorithmic bias and model transparency for life-insurance underwriters."
+  tags: [machine-learning, algorithmic-bias]
   links:
-    post: https://substack.com/@colefrank
-
-- title: "Earlier work"
-  date: 2024-06
-  blurb: "Older entries can stay around indefinitely; the date controls ordering."
-  tags: [economics]
-  links:
-    paper: https://example.com
+    post: https://web.archive.org/web/20221129105811/https://www.soa.org/sections/actuary-of-future/aof-newsletter/2022/october/aof-2022-10-brew/
