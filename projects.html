@@ -7,7 +7,10 @@ permalink: /projects/
 <p>Some things I've built, written, or contributed to</p>
 
 <ul class="project-grid">
-  {%- assign projects = site.data.projects | sort: "date" | reverse -%}
+  {%- assign all = site.data.projects | sort: "date" | reverse -%}                                                                                                         
+  {%- assign featured = all | where: "featured", true -%}                                                                                                                
+  {%- assign rest = all | where_exp: "item", "item.featured != true" -%}                                                                                                 
+  {%- assign projects = featured | concat: rest -%}   
   {%- for project in projects -%}
     {%- include project-card.html project=project -%}
   {%- endfor -%}
